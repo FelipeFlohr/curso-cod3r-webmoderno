@@ -2,6 +2,7 @@ function tratarErroELancar(erro) {
     throw new Error("Nome inválido")
 }
 
+// Tratamento de exceções em JS é similar ao de qualquer outra língua
 function printarNomeCaixaAlta(obj) {
     try {
         console.log(obj.name.toUpperCase())
