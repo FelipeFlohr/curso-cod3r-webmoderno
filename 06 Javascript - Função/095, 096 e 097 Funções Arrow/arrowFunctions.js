@@ -36,3 +36,10 @@ function Pessoa() {
 }
 
 new Pessoa
+
+let objQualquer = {}
+let comparaComThisArrow = (nomeParam, param) => console.log(nomeParam + " é igual a this dentro da Arrow Function: " + (this === param))
+comparaComThisArrow("global", global)
+comparaComThisArrow("module.exports", module.exports)
+comparaComThisArrow = comparaComThisArrow.bind(objQualquer)
+comparaComThisArrow("Com um objeto qualquer bindado á uma Arrow Function, esta mesma", objQualquer) // Uma arrow function é mais forte que um bind
