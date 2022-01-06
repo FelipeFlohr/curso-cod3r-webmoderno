@@ -27,5 +27,5 @@ for (let i in notas) {
 console.log("Notas baixas sem callback: " + notasBaixas1)
 
 // Com callback
-notasBaixas2 = notas.filter(nota => nota < 7)
+let notasBaixas2 = notas.filter(nota => nota < 7)
 console.log("Notas baixas com callback: " + notasBaixas2)
