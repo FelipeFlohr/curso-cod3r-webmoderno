@@ -2,6 +2,7 @@ const porta = 3003
 
 const express = require("express")
 const app = express()
+const bancoDeDados = require("./bancoDeDados")
 
 // Fazendo um get utilizando o padrão Middleware
 app.get("/produtos", (req, res, next) => {
@@ -10,7 +11,20 @@ app.get("/produtos", (req, res, next) => {
 })
 
 app.get("/produtos", (req, res, next) => {
-    res.send({ nome: "Notebook", preco: 1234.56 }) // Converte automáticamente para JSON
+    res.send(bancoDeDados.getProdutos()) // Converte automáticamente para JSON
+})
+
+app.get("/produtos/:id", (req, res, next) => {
+    res.send(bancoDeDados.getProduto(req.params.id)) // Para obter o parâmetro que chegou na URL, menciona-se "req.params" e utiliza o parâmetro
+})
+
+app.post("/produtos", (req, res, next) => {
+    const produto = bancoDeDados.salvarProduto({
+        nome: req.body.nome,
+        preco: req.body.preco
+    })
+
+    res.send(produto)
 })
 
 // Executando o Express
