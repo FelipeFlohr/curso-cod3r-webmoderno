@@ -1,0 +1,22 @@
+{
+  "name": "api-express",
+  "version": "1.0.0",
+  "description": "Projeto de API utilizando o Express",
+  "main": "src/servidor.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "api"
+  ],
+  "author": "Felipe Matheus Flohr",
+  "license": "MIT",
+  "dependencies": {
+    "express": "4.16.2"
+  },
+  "devDependencies": {
+    "nodemon": "1.14.11"
+  }
+}
