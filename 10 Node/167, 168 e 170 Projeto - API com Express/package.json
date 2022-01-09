@@ -14,6 +14,7 @@
   "author": "Felipe Matheus Flohr",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.19.1",
     "express": "4.16.2"
   },
   "devDependencies": {
