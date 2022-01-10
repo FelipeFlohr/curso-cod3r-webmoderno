@@ -19,6 +19,7 @@ const getTurma = (letra, callback) => {
     })
 }
 
+// Esse amontuado de callbacks também é chamado de "Callback Hell", e o Promise possui uma solução muito mais interessante para abordar isso
 let nomes = []
 getTurma("A", alunos => {
     nomes = nomes.concat(alunos.map(aluno => `A: ${aluno.nome}`)) // Pega os alunos A
