@@ -1,0 +1,6 @@
+/* Para estilizar um id, usa-se "#" */
+#txt1 {
+    font-size: 30px;
+    background-color: bisque;
+    padding: 6px;
+}

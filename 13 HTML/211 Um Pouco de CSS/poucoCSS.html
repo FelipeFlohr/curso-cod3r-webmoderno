@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Um Pouco de CSS</title>
+        <link rel="stylesheet" href="poucoCSS.css"> <!-- É melhor referenciar um arquivo CSS do que escrevê-lo in-line. Para isso, utiliza-se a tag Link -->
+        <style>
+            /* Tudo referenciado aqui dentro será relacionado á CSS */
+            h1 {
+                background-color: blue;
+                color: white;
+                text-align: center;
+                font-size: 40px;
+            }
+
+            /* Uma classe CSS é criada a partir de um "." e o nome da classe */
+            .fundoVermelho {
+                background-color: #f00;
+            }
+
+            .negrito {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS</h1>
+        <span id="txt1">Texto 1</span><br> <!-- span é uma tag similar á uma div, porém divs são usadas em nível de bloco -->
+        <span class="fundoVermelho negrito">Texto 2</span><br> <!-- Enquanto "id" é pra ser um identificador único, "class" é pra ser usada em mais de um elemento -->
+        <span class="fundoVermelho">Texto 3</span>
+    </body>
+</html>
