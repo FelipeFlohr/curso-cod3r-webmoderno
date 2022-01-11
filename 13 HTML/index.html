@@ -5,27 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capítulo 13: HTML</title>
+    <style>
+        footer {
+            padding: 30px 0px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        Exercícios HTML
+        <h1>Exercícios HTML</h1>
     </header>
     <nav>
-        <a href="209 Anatomia da TAG/anatomiaTag.html">209 Anatomia da TAG</a>
-        <a href="210 Anatomia de uma Página HTML/anatomiaHTML.html">210 Anatomia de uma Página HTML</a>
-        <a href="211 Um Pouco de CSS/poucoCSS.html">211 Um Pouco de CSS</a>
+        <a href parametro-custom="209 Anatomia da TAG/anatomiaTag.html">209 Anatomia da TAG</a>
+        <a href parametro-custom="210 Anatomia de uma Página HTML/anatomiaHTML.html">210 Anatomia de uma Página HTML</a>
+        <a href parametro-custom="211 Um Pouco de CSS/poucoCSS.html">211 Um Pouco de CSS</a>
+        <a href parametro-custom="215 e 216 Tags para Textos/tagsTexto.html">215 e 216 Tag para Textos</a>
     </nav>
     <section id="conteudo"></section> <!-- Aqui irá aparecer o conteúdo dos exercícios -->
     <footer>
         Capítulo 13 do Curso Web Moderno
     </footer>
     <script>
-        document.querySelectorAll("a").forEach(link => {
+        document.querySelectorAll("[parametro-custom]").forEach(link => {
             const conteudo = document.getElementById("conteudo")
 
             link.onclick = function(evento) { // O bloco abaixo será invocado quando ocorrer um evento de clique no link
                 evento.preventDefault() // Evita com que a página seja atualizada. Em outras palavras, previne o comportamento padrão da tag
-                fetch(link.href) // Faz uma requisição AJAX
+                fetch(link.getAttribute("parametro-custom")) // Faz uma requisição AJAX
                     .then(response => response.text()) // Pega a resposta do "href" e transforma em texto
                     .then(html => conteudo.innerHTML = html) // Pega o texto transforma e joga dentro do HTML de "conteudo"
             }
