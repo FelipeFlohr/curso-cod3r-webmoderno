@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -31,7 +30,33 @@
 
     <!-- Espaços em branco no HTML não são contados -->
     <p>
-        Espaço              em            branco
+        Espaço    em  branco
+    </p>
+
+    <!-- Quebra de Linha e Quebra Temática -->
+    <p>Isso está <br>em uma<br/> nova linha.</p>
+
+    <p>Tema 1</p>
+    <hr>
+    <p>Tema 2</p>
+
+    <!-- Marcações semânticas -->
+    <p>
+        <strong>Cuidado!</strong> Alta Voltagem! <em>Somente pessoal autorizado.</em> <!-- "strong" é uma tag para definir um elemento forte e "em" um elemento com ênfase. No browser, a renderização padrão dos dois é negrito e itálico, porém, ambos podem ser alterados através de CSS. -->
+        <blockquote cite="https://pt.wikipedia.org/"><p>Citação longa...</p> </blockquote>
+    </p>
+    <p>
+        Fulano disse que <q>tempor incididunt ut labore et dolore</q>
+    </p>
+    <p>
+        <abbr title="Professor">Prof</abbr> <!-- Abreviação -->
+        <cite>Citação</cite>
+    </p>
+    <address>
+        <p>Rua ABC, n.100</p>
+    </address>
+    <p>
+        <del>Flamengo</del> <ins>VASCO!</ins>
     </p>
 </body>
 </html>
