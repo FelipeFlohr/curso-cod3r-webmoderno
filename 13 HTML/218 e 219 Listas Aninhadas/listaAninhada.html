@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listas Aninhadas</title>
+    <link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+</head>
+<body>
+    <!-- Desafio: a lista aninhada abaixo possui uma similaridade com um
+    explorador de arquivos. O desafio consiste em fazer com que as pastas
+    se expandam e retraiam-->
+    <ul class="tree">
+        <li>
+            <a href="#" onclick="hideFolder('folder1')">backend</a>
+            <ul id="folder1">
+                <li>
+                    <a href="#" onclick="hideFolder('folder2')">app</a>
+                    <ul id="folder2">
+                        <li>produto.js</li>
+                        <li>usuario.js</li>
+                        <li>venda.js</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="hideFolder('folder3')">config</a>
+                    <ul id="folder3">
+                        <li>banco.js</li>
+                        <li>rotas.js</li>
+                        <li>servidor.js</li>
+                    </ul>
+                </li>
+            </ul>
+        <li>
+            <a href="#" onclick="hideFolder('folder4')">frontend</a>
+            <ul id="folder4">
+                <li>
+                    <a href="#" onclick="hideFolder('folder5')">public</a>
+                    <ul id="folder5">
+                        <li>app.css</li>
+                        <li>app.js</li>
+                        <li>index.html</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+<script>
+    function hideFolder(elementId) {
+        const element = document.getElementById(elementId)
+        if (element.hidden) {
+            element.hidden = false
+        } else {
+            element.hidden = true
+        }
+    }
+</script>
+</html>
