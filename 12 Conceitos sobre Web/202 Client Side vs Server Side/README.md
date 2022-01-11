@@ -1,0 +1,4 @@
+# Client Side *versus* Server Side
+A relação atualmente entre o Client Side e o Server Side é muito mais para obter dados. Antigamente houve períodos em que as vezes o Client Side era responsável por realizar a grande parte dos processos (porém isso dificultava quando era necessário fazer uma atualização na aplicação, tendo em vista que cada computador iria precisar atualiza-la) e as vezes o Server Side era responsável por realizar a grande parte dos processos (porém na hora de fazer uma atualização uma grande latência era gerada).
+
+A relação atualmente é feita através da troca de dados (muitas vezes utilizado JSON) na qual precisa passar por uma série de camadas de filtragem, de segurança, etc.

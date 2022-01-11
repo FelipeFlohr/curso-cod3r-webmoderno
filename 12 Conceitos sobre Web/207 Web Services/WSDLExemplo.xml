@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="Hello" targetNamespace="http://hello" xmlns:tns="http://hello" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <types>
+        <xsd:schema elementFormDefault="qualified" targetNamespace="http://hello">
+
+            <xsd:complexType name="sayHelloType">
+                <xsd:sequence>
+                    <xsd:element name="name" type="xsd:string" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="sayHello" type="tns:sayHelloType" />
+
+            <xsd:complexType name="sayHelloResponseType">
+                <xsd:sequence>
+                    <xsd:element name="return" type="xsd:string" />
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="sayHelloResponse" type="tns:sayHelloResponseType" />
+
+        </xsd:schema>
+    </types>
+
+    <message name="sayHello">
+        <part name="parameters" element="tns:sayHello" />
+    </message>
+    <message name="sayHelloResponse">
+        <part name="result" element="tns:sayHelloResponse" />
+    </message>
+
+    <portType name="HelloPortType">
+        <operation name="sayHello">
+            <input message="tns:sayHello" name="sayHello" />
+            <output message="tns:sayHelloResponse" name="sayHelloResponse" />
+        </operation>
+    </portType>
+
+    <binding name="HelloBinding" type="tns:HelloPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+        <operation name="sayHello">
+            <soap:operation soapAction="" />
+            <input>
+                <soap:body use="literal" />
+            </input>
+            <output>
+                <soap:body use="literal" />
+            </output>
+        </operation>
+    </binding>
+
+    <service name="HelloService">
+        <port name="HelloPort" binding="tns:HelloBinding">
+            <soap:address location="http://server:port/context/endpoint" />
+        </port>
+    </service>
+
+</definitions>
