@@ -17,6 +17,7 @@
 <body>
     <h1>Formulário</h1>
     <form action="http://localhost:3003/usuarios" method="post"> <!-- Cria um formulário com o método POST -->
+        <input type="hidden" name="id" value="3">
         <input type="text" name="nome" id="">
         <input type="password" name="senha" id="">
         <textarea name="bio" cols="30" rows="10"></textarea>
@@ -45,6 +46,7 @@
         </select>
 
         <button>Incluir</button>
+        <button formaction="http://localhost:3003/usuarios/3">Alterar</button>
     </form>
 </body>
 </html>
