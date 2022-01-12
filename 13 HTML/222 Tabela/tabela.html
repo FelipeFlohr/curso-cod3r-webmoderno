@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tabela</title>
+        <link rel="stylesheet" href="tabela.css">
+    </head>
+    <body>
+        <table>
+            <caption>Produtos</caption> <!-- Caption descreve o conteúdo da tabela. Não é muito tag muito utilizada -->
+            <thead> <!-- Define a área em que o cabeçalho da tabela será colocado -->
+                <tr> <!-- tr = Table Row -->
+                    <th>Produto</th> <!-- th = Table Head -->
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody> <!-- Corpo da tabela -->
+                <tr>
+                    <td>iPad</td>
+                    <td>3289,00</td>
+                    <td>5</td>
+                    <td>16445,00</td>
+                </tr>
+                <tr>
+                    <td>Samsung S9</td>
+                    <td>2649,00</td>
+                    <td>8</td>
+                    <td>21192,00</td>
+                </tr>
+            </tbody>
+            <tfoot> <!-- Representa o rodapé da tabela -->
+                <tr>
+                    <td colspan="3" rowspan="2">Total</td> <!-- "colspan" é uma propriedade que indica quantas colunas uma coluna irá ocupa. "rowspan" funciona da mesma maneira porém para linhas -->
+                    <td>37647,00</td>
+                </tr>
+                <tr>
+                    <td>Teste</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+}
+
+thead tr { /* Interpreta-se: no "tr" que está dentro de "thead", aplica-se o seguinte estilo: */
+    border-bottom: solid 3px #444;
+}
+
+tbody tr:hover { /* Interpreta-se: no "tr", dentro de "tbody", quando o usuário passar o mouse em cima, aplica-se o seguinte estilo: */
+    background-color: #dedede;
+}
+
+tfoot {
+    background-color: #444;
+    color: white;
+}
