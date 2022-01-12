@@ -1,0 +1,20 @@
+{
+  "name": "formulario",
+  "version": "1.0.0",
+  "description": "Criação de um formulário com integração no Back-end",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "form",
+    "formulario"
+  ],
+  "author": "Felipe Matheus Flohr",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "express": "4.16.3"
+  }
+}
