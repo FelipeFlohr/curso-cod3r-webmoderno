@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo</title>
+    <style>
+        .progresso {
+            height: 20px;
+            width: 500px;
+            border: solid 1px #444;
+            margin: 20px;
+        }
+
+        .progresso > div { /* Interpreta-se: dentro da classe progresso na qual está dentro de uma div, aplique o seguinte estilo: */
+            background-color: red;
+            color: white;
+            height: 100%; /* A altura será 100% em relação ao parent, nesse caso, "progresso" */
+            text-align: right;
+            font: 14px;
+            /* width é a propriedade que controla o preenchimento da barra */
+        }
+    </style>
+</head>
+<body>
+    <video id="meuVideo" width="800" height="450" controls controlsList="nodownload"> <!-- Outros parâmetros: autoplay (inicia o vídeo assim que o mesmo for carregado); controlsList="nodownload" (evita com que o usuário baixe o vídeo)-->
+        <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+        Seu browser não suporta a tag de vídeo.
+    </video>
+
+    <!-- Criando uma Progress Bar para o vídeo -->
+    <div progresso="meuVideo" class="progresso">
+        <div></div>
+    </div>
+
+    <!-- Criando os botoes de play do vídeo-->
+    <div>
+        <button play="meuVideo">Play</button>
+        <button pause="meuVideo">Pause</button>
+    </div>
+</body>
+</html>
