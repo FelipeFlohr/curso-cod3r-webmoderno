@@ -1,0 +1,44 @@
+<!-- Desafio: implementar as funcionalidades do botão de play e da Progress bar -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo</title>
+    <style>
+        .progresso {
+            height: 20px;
+            width: 75%;
+            border: solid 2px rgb(46, 42, 42);
+            margin: 20px;
+        }
+
+        .progresso > div { /* Interpreta-se: Na div dentro da classe progresso, aplique o seguinte estilo: */
+            background-color: rgb(2, 175, 69);
+            color: white;
+            height: 100%; /* A altura será 100% em relação ao parent, nesse caso, "progresso" */
+            text-align: right;
+            font: 14px;
+            /* width é a propriedade que controla o preenchimento da barra */
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <video id="meuVideo" width="800" height="450" controls controlsList="nodownload"> <!-- Outros parâmetros: autoplay (inicia o vídeo assim que o mesmo for carregado); controlsList="nodownload" (evita com que o usuário baixe o vídeo)-->
+        <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+        Seu browser não suporta a tag de vídeo.
+    </video>
+
+    <!-- Criando uma Progress Bar para o vídeo -->
+    <div progresso="meuVideo" class="progresso">
+        <div></div>
+    </div>
+
+    <!-- Criando os botoes de play do vídeo-->
+    <div>
+        <button playbtn="meuVideo">Play</button>
+    </div>
+</body>
+</html>
