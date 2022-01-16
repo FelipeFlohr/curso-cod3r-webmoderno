@@ -1,0 +1,21 @@
+.selector { /* <- Define a classe na qual o estilo vai ser aplicado */
+    color: rgb(255, 255, 255); /* Define a cor do elemento */
+    font-size: 30px;
+    text-align: center;
+    border: solid 5px navy; /* Define a borda do elemento. O mesmo aceita múltiplos valores. Essas propriedades são conhecidas como "shorthand property" */
+    font-family: Helvetica, monospace; /* Define a fonte do texto. Caso a fonte "Helvetica" não esteja instalada no computador do usuário, então será carregada a fonte "monospace" */
+    /* Funções */
+    width: calc(100% - 100px); /* Define que o tamanho da borda vai ser "100% do tamanho da tela" - 100 pixels */
+    background-color: rgb(34, 153, 189); /* Define a cor de fundo */
+}
+
+/* Usando uma pseudo-classe */
+.selector:hover { /* Essa classe será aplicada quando o usuário passar o cursor por cima */
+    background-color: orangered;
+}
+
+/* Usando um pseudo-elemento */
+.selector::first-letter { /* Define o estilo da primeira letra do elemento */
+    font-size: 40px;
+    font-weight: bold;
+}
