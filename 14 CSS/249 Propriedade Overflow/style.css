@@ -1,0 +1,6 @@
+/* Overflow: itens extrapolando sua área de preenchimento */
+div {
+    overflow: hidden; /* Faz com que tudo que esteja extrapolando a borda do elemento seja escondido */
+    overflow: scroll; /* Cria uma barra de rolagem tanto vertical como horizontal para elementos que estejam extrapolando */
+    overflow-x: scroll; /* Faz com que apenas no eixo x haja um overflow de scroll */
+}
