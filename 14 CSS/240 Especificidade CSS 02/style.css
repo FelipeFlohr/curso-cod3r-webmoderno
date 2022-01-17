@@ -1,0 +1,22 @@
+body {
+    font-size: 40px;
+}
+
+div {
+    background-color: blue;
+    color:wheat;
+}
+
+div[wm-cor] {
+    background-color: darkorange;
+    color:rgb(75, 71, 71);
+}
+
+div:hover { /* div:hover possuí mais prioridade que div[wm-cor] pois foi a última a ser chamada */
+    background-color: purple;
+    color:white;
+}
+
+#unico1, #unico2 { /* ID tem prioridade sobre classe */
+    background-color: #000;
+}
