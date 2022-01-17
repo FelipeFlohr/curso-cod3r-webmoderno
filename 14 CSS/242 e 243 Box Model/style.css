@@ -1,0 +1,23 @@
+body {
+    font-size: 60px;
+    margin: 0;
+}
+
+.c1 {
+    background-color: orange;
+}
+
+.c2 {
+    background-color: skyblue;
+}
+
+.c3 {
+    background-color: tomato;
+}
+
+div {
+    float: left; /* Faz com que os elementos fiquem alinhados á esquerda */
+    padding-top: 100px;
+    padding: 10px 50px 100px 150px;
+    margin: 5px 20px;
+}
