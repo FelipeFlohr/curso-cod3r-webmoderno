@@ -1,0 +1,16 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+span, div {
+    width: 50%;
+    height: 50%; /* Este valor não será contabilizado */
+    height: 250px; /* O motivo desse valor ser aplicado e o de cima não, é por causa que este usa uma unidade absoluta, enquano a anterior usa uma unidade relativa */
+    height: 50%; /* Contudo, após setar a altura do html e do body para 100%, este valor passará a ser contabilizado pois terá espaço para expandir*/
+    display: block;
+}
