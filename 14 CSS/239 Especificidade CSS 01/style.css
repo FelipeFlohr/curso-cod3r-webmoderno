@@ -1,0 +1,15 @@
+p {
+    background-color: #aaa;
+}
+
+.observacao {
+    background-color: #5F5;
+    border: dashed;
+    padding: 20px;
+    font-size: 40px;
+}
+
+p.observacao { /* <= Mais específico que observação */
+    padding: 5px 60px;
+    background: linear-gradient(to right, red, yellow);
+}
