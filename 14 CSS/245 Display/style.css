@@ -1,0 +1,32 @@
+body {
+    font-size: 40px;
+    color: #fff;
+    background-color: coral;
+}
+
+ul {
+    padding: 0;
+}
+
+div {
+    background-color: seagreen;
+}
+
+span {
+    background-color: dodgerblue;
+}
+
+li {
+    background-color: purple;
+}
+
+div, span, li {
+    width: 50%; /* Apenas a div e a li terão seu tamanho reduzido pela metade */
+    width: 200px; /* Novamente o span não teve seu tamanho mudado */
+    height: 80px; /* Novamente o span não teve seu tamanho mudado */
+    padding-top: 30px; /* Todos os elementos suportaram o padding, inclusive o span */
+    text-align: center;
+    display: block; /* Display padrão de uma div: block. Mostra cada elemento em uma linha, ocupando todo o espaço disponível */
+    display: inline; /* Display padrão de um span: inline. Altura e largura de um componente é ignorada, contudo, o padding não */
+    display: inline-block; /* Mesma coisa que o inline, porém leva em consideração a altura e largura */
+}
