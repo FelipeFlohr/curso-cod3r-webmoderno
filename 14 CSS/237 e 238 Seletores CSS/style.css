@@ -1,0 +1,49 @@
+* { /* Seleciona tudo */
+    background-color: rgb(255, 255, 255);
+}
+
+.tag { /* Seleciona uma classe */
+    background-color: rgb(190, 190, 190);
+}
+
+#aprovados { /* Seleciona um ID */
+    background-color: green;
+}
+
+#aninhado > div { /* Pega a div diretamente ligada ao elemento "aninhado" */
+    background-color: rgb(73, 73, 73);
+}
+
+#aninhado section {
+    background-color: orangered;
+}
+
+p + ul { /* Selecionará os irmãos adjacentes */
+    color: rgb(163, 163, 24);
+    background-color:aqua;
+}
+
+p ~ ol { /* Selecionará os irmãos adjacentes e não adjacentes */
+    color: rgb(179, 0, 0);
+}
+
+[feira] { /* Selecionará todos os elementos com a propriedade "feira" */
+    color:rgb(163, 163, 24);
+}
+
+[feira=casa] { /* Selecionará apenas quando "feira" tiver o valor "casa" */
+    color: rgb(80, 70, 12);
+}
+
+span:nth-child(1) { /* Selecionará o primeiro filho de alguém que é do tipo span */
+    color: white;
+    background-color: black;
+}
+
+section > :nth-child(even) { /* Seleciona todos os filhos pares dentro de uma section */
+    background-color:red;
+}
+
+section > span:nth-of-type(2) { /* Seleciona o segundo elemento do tipo span dentro de uma section */
+    background-color:brown;
+}
