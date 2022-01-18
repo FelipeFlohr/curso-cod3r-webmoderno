@@ -1,0 +1,65 @@
+div {
+    font-size: 60px;
+    padding: 30px;
+    border: solid 5px #222;
+    color: white;
+}
+
+.static {
+    /* Static é a position default. No static, os valores "top" e "left" não são considerados */
+    top: 100px;
+    left: 100px;
+    background-color: steelblue;
+}
+
+.fixed {
+    /* Dentro da posição fixed, por mais que a página seja rolada para baixo, o elemento continuará em sua posição */
+    position: fixed;
+    bottom: 30px; /* O elemento ficará 30 pixels alinhado ao chão da página */
+    right: 0px; /* O elemento ficará 0 pixel alinhado a direita da página */
+    background-color: tomato;
+}
+
+.relative1 {
+    /* Leva em consideração o elemento anterior */
+    position: relative;
+    left: 50px; /* Ficará 50 pixels á esquerda do elemento anterior (nesse caso "static") */
+    top: 5px; /* Ficará 5 pixels afastado do topo do elemento anterior */
+    background-color: darksalmon;
+}
+
+.absolute1 {
+    /* Leva em consideração o body */
+    position: absolute;
+    left: 350px;
+    top: 120px;
+    background-color: violet;
+}
+
+.relative2 {
+    position: relative;
+    left: 250px;
+    top: 2000px;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 70px;
+}
+
+.absolute2 {
+    /* Como a div está dentro de outra div, a mesma se posicionará de forma absoluta dentro dela, e não em relação ao viewport */
+    position: absolute;
+    left: 60px;
+    top: 10px;
+    width: 70px;
+    height: 20px;
+    background-color: gray;
+    border-radius: 35px;
+}
+
+.sticky {
+    /* Fica grudado em relação a barra de rolagem */
+    position: sticky;
+    background-color: #777;
+    top: 10px;
+}
