@@ -1,0 +1,19 @@
+.fora {
+    position: relative;
+    background-color: orange;
+    /* A largura de uma div por padrão é 100%, porém a altura é definida pelo
+    tamanho do conteúdo */
+    width: 400px;
+    height: 400px;
+    padding: 50px;
+}
+
+.dentro {
+    background-color: mediumvioletred;
+    height: 100px;
+    width: 100%; /* Porcentagem representa o tamanho em relação ao elemento pai */
+    position: static; /* Position static é a position default. Faz com que ocupe todo o conteúdo */
+    position: relative; /* Faz com que ocupe todo o conteúdo */
+    position: absolute; /* Faz com que ocupe todo o conteúdo + padding */
+    position: fixed; /* Leva em consideração o viewport ao invés do elemento pai */
+}
