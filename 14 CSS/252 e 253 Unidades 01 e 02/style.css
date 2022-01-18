@@ -1,0 +1,23 @@
+.unidades-absolutas {
+    position: absolute; /* Por mais que a posição seja absoluta, não há nenhuma relação da mesma estar associada á classe "unidades-absolutas" */
+    font-size: 40px;
+    padding: 20px;
+    border: solid 2px #222;
+    margin: 30px;
+    width: 4cm;
+    height: 5cm;
+    top: 150px; /* Posição do elemento em relação ao topo da página. Esse valor só tem efeito se a position for absolute */
+    left: 200px; /* Posição do elemento em relação ao canto esquerdo da página. Esse valor só tem efeito se a position for absolute */
+}
+
+.unidades-relativas {
+    position: absolute;
+    font-size: 4em;
+    padding: 5%;
+    border: solid 1vw #222;
+    margin: .8%;
+    width: 20vw;
+    height: 15vw;
+    bottom: 5%;
+    right: 5%;
+}
