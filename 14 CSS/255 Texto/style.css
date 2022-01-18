@@ -1,0 +1,22 @@
+p {
+    /* Valores padrões */
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.botao {
+    font-size: 28px;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 25px;
+}
+
+.destaque {
+    color: #fff;
+    background: tomato;
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.349);
+}
+
+.destaque:active {
+    box-shadow: none;
+}
