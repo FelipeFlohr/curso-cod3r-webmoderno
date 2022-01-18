@@ -1,0 +1,20 @@
+/* @media é uma regra usada em media queries para aplicar diferentes estilos
+para diferentes tipos de mídia/dispositivos. (Responsividade) */
+
+@media (max-width: 600px) { /* O estilo dentro da media somente irá ser aplicado quando a largura da página for menor que 600 pixels */
+    .muito-pequeno {
+        display: block;
+    }
+}
+
+@media (max-width: 1000px), (orientation: portrait) { /* O estilo dentro da media somente irá ser aplicado se a largura da página for menor que 1000 pixels e a orientação for retrato */
+    .pequeno-retrato {
+        display: block;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 1000px) { /* O estilo dentro da media somente irá ser aplicado se a largura da tela for maior que 500 pixels e menor que 1000 pixels */
+    .intervalo {
+        display: block;
+    }
+}
