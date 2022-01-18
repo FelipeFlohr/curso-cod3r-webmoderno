@@ -1,0 +1,12 @@
+div {
+    height: 150px;
+    width: 150px;
+}
+
+.c1 {
+    float: right; /* Utilizando a propriedade float, faz com que os elementos flutuem para um lado */
+}
+
+.c2 {
+    clear: right; /* A propriedade clear serve para especificar se um elemento pode ter elementos flutuantes ao seu lado e se devem ser movidos para abaixo dele */
+}
