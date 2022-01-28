@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+    background-color: lightgray;
+}
+
+.cabecalho {
+    background-color: #333;
+    border-bottom: solid 5px lightskyblue;
+    height: 80px;
+    box-sizing: content-box;
+}
+
+.logo {
+    display: inline-block;
+    height: 80px;
+    padding: 15px;
+}
+
+.logo img {
+    height: 100%; /* Faz com que a imagem fique limitada ao tamanho do parent (nesse caso: logo) */
+}
+
+.menu-toggle {
+    float: right;
+    color: #eee;
+    background-color: #555;
+    border: solid 1px #777;
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px 20px;
+    margin: 20px 15px;
+}
+
+.menu {
+    display: inline-block;
+    vertical-align: top;
+    height: 80px;
+    padding: 25px;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block; /* Faz com que os itens do menu fiquem lado a lado */
+}
+
+.cabecalho a {
+    text-decoration: none;
+    color: #eee;
+    font-size: 1.3em;
+    padding: 15px;
+}
+
+.menu a {
+    padding: 15px;
+}
+
+.autenticacao {
+    float: right;
+    height: 80px;
+    padding: 25px;
+}
+
+.menu a:hover, .menu a.selected { /* <- "menu a.selected" se refere ao estado do botão estar selecionado. Uma classe "selected" será adicionada para o botão selecionado via JS */
+    background-color: #48a0cc;
+    color: #000;
+}
+
+.botao {
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin: 10px;
+}
+
+.destaque {
+    background-color: orangered;
+    color: #fff;
+}
+
+/* O menu toggle irá sumir quando o tamanho da página for maior que 704 pixels */
+@media(min-width: 704px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Caso o tamanho da página for menor que 703 pixels, então o menu sumirá */
+@media(max-width: 703px) {
+    .menu {
+        display: none;
+    }
+}
+
+/* Caso o tamanho da página for menor que 950 pixels, a parte da autenticação sumirá */
+@media(max-width: 950px) {
+    .autenticacao {
+        display: none;
+    }
+}
