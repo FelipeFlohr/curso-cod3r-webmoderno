@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+.curso {
+    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 15px rgba(64, 66, 66, 0.596);
+    width: 260px;
+    height: 320px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    float: left;
+    margin: 20px;
+}
+
+.curso img {
+    width: 100%;
+}
+
+.curso-info {
+    width: 100%;
+    padding: 10px;
+    height: 35%;
+    overflow: hidden;
+}
+
+.curso-info h4 {
+    font-size: 1.5em;
+    margin: 0px;
+    font-weight: normal;
+}
+
+.curso-info p {
+    font-size: 1.2em;
+}
+
+.curso-preco {
+    float: right;
+    margin-top: 30px;
+}
+
+.preco-de {
+    color: red;
+    text-decoration: line-through;
+}
+
+.preco-por {
+    color: green;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
