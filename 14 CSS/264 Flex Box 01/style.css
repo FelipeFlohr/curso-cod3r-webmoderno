@@ -1,0 +1,27 @@
+.big {
+    font-size: 1.5em;
+}
+
+.flex-container {
+    display: flex; /* Indica que a classe CSS passou a ser um Flex Container.*/
+    flex-direction: row; /* Faz com que os itens fiquem organizados em linhas. Por padrão, o eixo principal é a linha.*/
+    width: 50%;
+    height: 200px;
+    flex-wrap: wrap; /* Para evitar overlap, o flex-wrap quebra os itens dentro do Flex Container */
+    flex-flow: row wrap; /* Mistura flex-direction e flex-wrap */
+
+    /* Trabalhando com o Main Axis */
+    justify-content: flex-start; /* Justifica os elementos a partir do Flex Start */
+    justify-content: space-around; /* Distribui os itens de maneira uniforme para que a largura inteira seja ocupada */
+
+    /* Trabalhando com o Cross Axis */
+    height: 400px;
+    align-items: baseline; /* Alinha os elementos na base das fontes. Com isso, o tamanho do elemento fica maior se a fonte for maior */
+    align-items: flex-start; /* Alinha os elementos no inicio do Cross Axis */
+    align-items: flex-end; /* Alinha os elementos no final do Cross Axis */
+    align-items: center; /* Alinha os elementos no centro */
+
+    /* Propriedades que funcionam quando se há múltiplas linhas */
+    align-content: flex-start; /* Todas as linhas vão para o topo do elemento */
+    align-content: flex-end; /* Todas as linhas vão para o fundo do elemento */
+}
