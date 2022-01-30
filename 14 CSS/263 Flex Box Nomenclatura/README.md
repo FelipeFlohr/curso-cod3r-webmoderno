@@ -1,0 +1,4 @@
+# Nomenclatura do Flex Box
+- Quando um elemento possui o display "flex", passa-se a ter um flex container. Dentro desse container há vários itens, na qual são chamados de *Flex Items*
+- O Flex Box é unidimensional: ou ele possui como **eixo principal** (*Main Axis*) a linha ou ele possui como eixo principal a coluna. Quando um eixo é setado, o outro passa a ser o eixo secundário, mais conhecido como **Eixo Transversal** (*Cross Axis*)
+- O Flex Container possui o **Main Size** (*Tamanho Principal*), **Main Start** (*Coneço do Eixo Principal*), **Main End** (*Fim do Eixo Principal*), assim como também possui o **Cross Size** (*Tamanho Transversal*), **Cross Start** (*Começo do Eixo Transversal*) e o **Cross End** (*Fim do Eixo Transversal*).
