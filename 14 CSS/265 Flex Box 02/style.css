@@ -1,0 +1,52 @@
+.flex-container div {
+    box-sizing: border-box;
+}
+
+/* Agora o código começa */
+.flex-container {
+    display: flex;
+    height: 300px;
+    width: 600px;
+}
+
+.flex-container div:nth-child(3) { /* Irá aplicar o estilo para o terceiro filho da classe */
+    background-color: indianred;
+    order: 1; /* Altera a ordem do elemento. Os elementos por padrão vem com a ordem 0. É possível colocar valores negativos */
+    align-self: stretch; /* Alinha um elemento em específico. Por padrão o valor é "stretch" */
+}
+
+/* Flex Grow:
+
+    Suponhamos que uma div possui a largura de 600px e dentro dela há quatro ele-
+    mentos de 100 pixels cada.
+
+    div:
+     E1 E2 E3 E4  EV
+    ------------------
+    |  |  |  |  |    |
+    |  |  |  |  |    |
+    ------------------
+
+    É possível notar que há um espaço vazio (EV) de 200 pixels. Com isso, a pro-
+    priedade "Flex Grow" serve para gerenciar como este espaço será preenchido.
+    Essa funciona da seguinte maneira: se aplicarmos o valor 1 para todos os ele-
+    mentos da div, o valor "200" (espaço vazio) será divido por 4 (quantidade de
+    elementos), com isso resultando o valor 50, na qual será aplicado na largura
+    dos quatro elementos, fazendo com que todo o espaço seja preenchido
+*/
+
+.flex-container div {
+    width: 100px;
+    flex-grow: 0;
+    flex-grow: 1;
+}
+
+.flex-container div:nth-child(1) {
+    background-color: orangered;
+    flex-grow: 2;
+}
+
+.flex-container {
+    width: 300px;
+    flex-shrink: 1; /* Da mesma maneira que o Flex Grow enlarga um elemento, o Flex Shrink encolhe */
+}
