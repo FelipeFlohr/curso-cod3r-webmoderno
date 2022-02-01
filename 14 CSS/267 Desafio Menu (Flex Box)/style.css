@@ -1,0 +1,13 @@
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    flex-grow: 10; /* O menu terá direito de crescer mais que os outros elementos */
+}
+
+.menu ul {
+    display: flex;
+}
