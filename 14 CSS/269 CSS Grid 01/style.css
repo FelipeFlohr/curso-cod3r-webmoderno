@@ -1,0 +1,34 @@
+body {
+    display: grid; /* Deixa os elementos em Grid */
+    grid-template-columns: 50% 50%; /* Define que haverá duas colunas. Cada ocupando 50% do espaço do body */
+    grid-template-columns: repeat(4, 8.33% 8.33% 8.33%); /* Cria doze colunas ao total com 8.33% de espaço cada */
+    grid-template-columns: repeat(12, 8.33%); /* Exata mesma coisa que a linha acima */
+    grid-template-columns: repeat(11, 100px) 100px; /* Repete 100px de tamanho para as 11 primeiras colunas e 100px para a coluna final */
+    grid-template-columns: minmax(100px, 300px); /* Faz com que o tamanho da coluna seja no mínimo 100 pixels e no máximo 300 */
+    grid-template-columns: 200px 20% 1fr; /* Divide o grid em três colunas: a primeira possui o tamanho de 200 pixels, a segunda ocupa 20% do tamanho da tela e a última ocupa 1 fragmento (o restante de espaço) */
+    grid-template-rows: 50% 25% 12.5% 12.5%; /* De forma respectiva os valores indicam o tamanho o tamanho das linhas */
+    grid-template-rows: 100px 1fr; /* Aplica 100 pixels na primeira linha, 1 fragmento na segundo. As outras linhas ficam com o seu tamanho baseado no tamanho do elemento */
+    grid-template-rows: 100px auto; /* Aplica 100 pixels na primeira linha e um valor "auto" no resto */
+}
+
+.d8 {
+    grid-column-start: 2; /* Faz com que o elemento comece na coluna 2 */
+    grid-column-end: 4; /* Faz com que o elemento termine na coluna 4 */
+    grid-column-end: span 2; /* Terminará duas casas após o inicio */
+    
+    /* Mesmas regras porém para a linha */
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+/* Elementos podem se sobrepor, veja: */
+.d10, .d11 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: span 1;
+}
+
+.d10 {
+    z-index: 1; /* Faz com que o elemento tenha uma preferência sobre o elemento d11 */
+}
