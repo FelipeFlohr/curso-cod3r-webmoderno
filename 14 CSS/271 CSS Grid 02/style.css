@@ -1,0 +1,17 @@
+body {
+    display: grid;
+    grid-template-columns: 
+    [inicio] 1fr /* <- Dá um nome a linha de início */
+    [metade-1 meio-1] 1fr /* <- Dá dois nomes á linha do meio */
+    [metade-2 meio-2] 1fr [fim]; /* <- Dá dois nomes á linha do meio e um nome á linha do fim */
+    grid-template-rows: repeat(3, 1fr); /* Irá criar três linhas, assim fazendo um grid 3x3 */
+
+    gap: 50px 10px; /* Aplica gap nas linhas e colunas respectivamente */
+}
+
+.d1 {
+    grid-column-start: metade-2; /* O grid começará na metade-2 */
+    grid-column-end: fim; /* O grid terminará no fim */
+    grid-column: meio-1 / fim; /* O elemento começará no meio-1 e terminará no fim */
+    grid-area: 1 / meio-1 / span 3 / fim; /* row-start column-start row-end column-end */
+}
