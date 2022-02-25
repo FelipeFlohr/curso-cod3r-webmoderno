@@ -26,4 +26,11 @@ app.post("/upload", (req, res) => {
     })
 })
 
+app.post("/formulario", (req, res) => {
+    res.send({
+        ...req.body, // <- Retorna todo o body utilizando o spreader
+        id: 1
+    })
+})
+
 app.listen(3000, () => console.log("Servidor rodando e escutando na porta 3000"))
