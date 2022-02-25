@@ -33,4 +33,18 @@ app.post("/formulario", (req, res) => {
     })
 })
 
+app.get("/parOuImpar", (req, res) => {
+    const par = parseInt(req.query.numero) % 2 === 0
+    res.send({
+        resultado: par ? "par" : "impar"
+    })
+})
+
+app.post("/parOuImpar", (req, res) => {
+    const par = parseInt(req.body.params.numero) % 2 === 0
+    res.send({
+        resultado : par ? "par" : "impar"
+    })
+})
+
 app.listen(3000, () => console.log("Servidor rodando e escutando na porta 3000"))
