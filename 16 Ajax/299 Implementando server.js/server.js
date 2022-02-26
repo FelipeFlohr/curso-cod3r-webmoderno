@@ -41,7 +41,8 @@ app.get("/parOuImpar", (req, res) => {
 })
 
 app.post("/parOuImpar", (req, res) => {
-    const par = parseInt(req.body.params.numero) % 2 === 0
+    const num = req.body.numero
+    const par = parseInt(num) % 2 === 0
     res.send({
         resultado : par ? "par" : "impar"
     })
