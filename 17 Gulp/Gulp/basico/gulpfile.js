@@ -8,4 +8,4 @@ function copiar(callback) { // <- Funções com o Gulp precisam de uma callback 
 }
 
 // Para o gulp reconhecer a função, a mesma precisa ser exportada
-module.exports.default = series(copiar) // <- O gulp ao ser chamado precisa ter uma função no campo "default". Por isso, ao exportar, for atribuído ao mesmo a função "series"
+module.exports.default = series(copiar) // <- O gulp ao ser chamado precisa ter uma função no campo "default". Por isso, ao exportar, foi atribuído ao mesmo a função "series"
