@@ -1,11 +1,29 @@
-const gulp = require("gulp") // <- Utilizando o padrão do Node CommonJS
-const series = gulp.series
+const gulp = require("gulp")
+const { series, parallel } = require("gulp")
 
-// Funções com o Gulp
-function copiar(callback) { // <- Funções com o Gulp precisam de uma callback para notificar que a função foi concluída
-    console.log("Tarefa de copiar!")
+const antes1 = callback => {
+    console.log("Tarefa Antes 1!")
     return callback()
 }
 
-// Para o gulp reconhecer a função, a mesma precisa ser exportada
-module.exports.default = series(copiar) // <- O gulp ao ser chamado precisa ter uma função no campo "default". Por isso, ao exportar, foi atribuído ao mesmo a função "series"
+const antes2 = callback => {
+    console.log("Tarefa Antes 2!")
+    return callback()
+}
+
+function copiar(callback) {
+    gulp.src(["pastaA/arquivo1.txt", "pastaA/arquivo2.txt"]) // <- Define os arquivos de entrada para esse workflow
+        .pipe(gulp.dest("pastaB")) // <- Função "pipe" serve para aplicar transformações para os arquivos que foram definidos como os arquivos de entrada. A função "gulp.dest" serve para marcar a pasta de destino como a "pastaB"
+    return callback()
+}
+
+const fim = callback => {
+    console.log("Tarefa Fim!")
+    return callback()
+}
+
+module.exports.default = series(
+    parallel(antes1, antes2),
+    copiar,
+    fim
+)
