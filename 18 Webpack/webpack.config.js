@@ -8,7 +8,7 @@ module.exports = {
         filename: "principal.js",
         path: __dirname + "/public"
     },
-    plugins: [ // Define os plugins do Webpack
+    plugins: [
         new MiniCssExtractPlugin({
             filename: "estilo.css"
         })
@@ -16,10 +16,11 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.s?[ac]ss$/, // Aceitará arquivos .SASS, .SCSS, e .CSS
                 use: [
-                    MiniCssExtractPlugin.loader, // Adiciona o loader do MiniCssExtractPlugin
-                    "css-loader"
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "sass-loader" // Adiciona o loader para SASS
                 ]
             }
         ]
