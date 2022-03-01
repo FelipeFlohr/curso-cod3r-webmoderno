@@ -1,3 +1,11 @@
+# Adicionando WebServer
+Para adicionar um WebServer, foi necessário instalar o seguinte:
+```json
+"webpack-dev-server": "^4.7.4"
+```
+
+Para configurar o WebServer, o arquivo "*webpack.config.js*" ficou da seguinte maneira:
+```js
 const modoDev = process.env.NODE_ENV !== "production" // Pega a variável de ambiente do Node e verifica se ela está no modo "production"
 const webpack = require("webpack")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
@@ -47,3 +55,4 @@ module.exports = {
         ]
     }
 }
+```
