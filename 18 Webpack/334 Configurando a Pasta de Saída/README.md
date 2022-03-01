@@ -1,3 +1,6 @@
+# Configurando a Pasta de Saída
+Para definir a pasta de saída, é necessário colocar o atributo "output" no "*webpack.config.js*", veja:
+```js
 const webpack = require("webpack")
 
 module.exports = {
@@ -7,3 +10,4 @@ module.exports = {
         filename: "principal.js"
     }
 }
+```
