@@ -5,4 +5,8 @@
     border-radius: 5px;
     overflow: hidden;
     background-color: red; /* Temp */
+
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(5, 48px);
 }
