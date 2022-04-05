@@ -1,0 +1,18 @@
+{
+  "name": "cadastro-backend",
+  "version": "1.0.0",
+  "description": "Backend para a aplicação de Cadastro de Usuário. Implementa o \"CRUD\".",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch db.json --port 3001"
+  },
+  "keywords": [
+    "crud",
+    "backend"
+  ],
+  "author": "Felipe Matheus Flohr",
+  "license": "MIT",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
