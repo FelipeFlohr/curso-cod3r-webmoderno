@@ -13,6 +13,11 @@
     justify-content: space-between;
 }
 
+.cabecalho h1 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
 .cabecalho a {
     background-color: rgb(250, 100, 130);
     padding: 5px 12px;
