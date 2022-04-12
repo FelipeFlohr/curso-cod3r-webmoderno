@@ -14,7 +14,7 @@ export default function Layout(props: LayoutProps) {
         text-gray-800
         rounded-md">
             <Titulo>{props.titulo}</Titulo>
-            <div className="px-6">
+            <div className="px-6 py-6">
                 {props.children}
             </div>
         </div>
