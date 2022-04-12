@@ -13,6 +13,7 @@ export default function Home() {
             <Navegador destino="/exemplo" texto="Exemplo" />
             <Navegador destino="/navegacao" texto="Navegação #01" />
             <Navegador destino="/sc/12345" texto="Navegação #02" cor="green" />
+            <Navegador destino="/estado" texto="Componente com Estado" cor="pink" />
         </div>
     )
 }
