@@ -4,11 +4,14 @@
   "description": "Seção do curso que aborda o \"Express\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon"
   },
   "author": "Felipe Matheus Flohr",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
