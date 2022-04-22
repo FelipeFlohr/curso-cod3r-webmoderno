@@ -12,9 +12,17 @@
     </style>
 </head>
 <body class="exercicio">
+    <div id="app" @click="aplicarCor = !aplicarCor" :class="{vermelho: aplicarCor}"> <!-- Ao clicar, irá fazer um toggle do atributo "aplicarCor", e caso seja verdadeiro, a classe do elemento passará a ser "vermelho" -->
+        Teste
+    </div>
 
     <script>
-        // ...
+        new Vue({
+            el: "#app",
+            data: {
+                aplicarCor: false
+            }
+        })
     </script>
 </body>
 </html>
