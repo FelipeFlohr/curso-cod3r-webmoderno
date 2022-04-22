@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Binding</title>
     <link rel="stylesheet" href="./css/estilo.css">
     <script src="./js/vue.min.js"></script>
 </head>
+
 <body class="exercicio">
+    <div id="app">
+        <p>{{ link }}</p>
+        <p><a v-bind:href="link">Meu GitHub</a></p>
+        <!-- Faz o binding do valor "link" ao atributo "href" da tag Anchor através da diretiva "v-bind" -->
+        <p><a :href="link">Meu GitHub com outra binding</a></p> <!-- Outra maneira de fazer a binding -->
+        <p>
+            <input type="text" v-model="nome"><br> <!-- v-model sincroza o valor do input com o campo "nome" (two way data-binding) -->
+            <span>{{ nome }}</span>
+        </p>
+    </div>
 
     <script>
-        // ...
+        new Vue({
+            el: "#app",
+            data: {
+                nome: "João",
+                link: "https://github.com/FelipeFlohr"
+            },
+            watch: { // Watch serve para escutar mudanças de dados
+                nome(novoValor) { // Sempre que o campo "nome" for alterado, a seguinte função será chamada
+                    console.log(novoValor.toUpperCase())
+                }
+            }
+        })
     </script>
 </body>
+
 </html>
