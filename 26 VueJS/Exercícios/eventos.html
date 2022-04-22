@@ -1,15 +1,50 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Eventos</title>
     <link rel="stylesheet" href="./css/estilo.css">
     <script src="./js/vue.min.js"></script>
 </head>
+
 <body class="exercicio">
+    <div id="app">
+        <p>{{ contador }}</p>
+        <p>
+            <button v-on:click="add">+1</button> <!-- Usa a diretiva "v-on" para referenciar o evento "click" -->
+            <button @click="contador -= 2">-2</button>
+            <!-- Usa @ para referenciar o evento "click", e no mesmo passa uma expressão simples para reduzir duas unidades do contador -->
+        </p>
+        <p @mousemove="atualizarPosicao"> <!-- Chama o método "atualizarPosicao()" toda vez que o evento "onMouseMove" é disparado no elemento -->
+            Coordenadas: {{ x }} e {{ y }}
+            <br><span @mousemove.stop>Aqui não</span> <!-- Cancela o evento "mouseMove" nesse elemento -->
+        </p>
+        <input type="text" @keyup.enter="alerta"> <!-- Somente quando a tecla "enter" for apertada que o método "alerta" será chamado -->
+    </div>
 
     <script>
-        // ...
+        new Vue({
+            el: "#app",
+            data: {
+                x: 0,
+                y: 0,
+                contador: 0
+            },
+            methods: {
+                add() {
+                    this.contador++
+                },
+                atualizarPosicao(e) {
+                    this.x = e.clientX
+                    this.y = e.clientY
+                },
+                alerta() {
+                    alert("Enter!")
+                }
+            }
+        })
     </script>
 </body>
+
 </html>
