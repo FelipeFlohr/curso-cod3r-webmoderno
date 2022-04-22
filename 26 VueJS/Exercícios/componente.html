@@ -1,15 +1,49 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Componente</title>
     <link rel="stylesheet" href="./css/estilo.css">
     <script src="./js/vue.min.js"></script>
 </head>
+
 <body class="exercicio">
+    <div id="app">
+        <contador nome="Contador #01"></contador>
+        <contador nome="Contador #02"></contador>
+        <contador nome="Contador #03"></contador>
+    </div>
 
     <script>
-        // ...
+        Vue.component("contador", { // Boa parte dos atributos que podem ser colocados na Vue instance também podem ser colocados num componente
+            props: ["nome"],
+            data: function() { // Dentro de um componente, o campo "data" deve retornar uma função
+                return {
+                    contador: 0
+                }
+            },
+            template: `
+                <div>
+                    <div>{{ nome }}: {{contador}}</div><br>
+                    <button @click="sub">-1</button>
+                    <button @click="add">+1</button>
+                </div>
+            `,
+            methods: {
+                add() {
+                    this.contador++
+                },
+                sub() {
+                    this.contador--
+                }
+            }
+        })
+
+        new Vue({
+            el: "#app"
+        })
     </script>
 </body>
+
 </html>
