@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Conceitos Básicos</title>
-    <link rel="stylesheet" href="/css/estilo.css">
-    <script src="/js/vue.min.js"></script>
+    <link rel="stylesheet" href="./css/estilo.css">
+    <script src="./js/vue.min.js"></script>
 </head>
+
 <body class="exercicio">
+    <div id="app">
+        <p>1) {{ 2 + 2 }}</p> <!-- Valores entre dois pares de chaves são expressões JavaScript -->
+        <p>2) {{ "teste".toUpperCase() }}</p>
+        <p>3) Produto: {{ nome }}</p>
+        <p>4) Hora certa: {{ horaCerta() }}</p>
+        <p>5) Preço com desconto: {{ precoComDesconto }}</p> <!-- Para acessar valores computados, a síntaxe é a mesma de um atritubo -->
+    </div>
 
     <script>
-        // ...
+        new Vue({ // Cria uma Vue instance
+            el: "#app", // Fazendo isso, o Vue consegue controlar a tag cujo ID é "app"
+            data: { // Com o campo "data", os valores abaixos poderão ser acessados por toda a template
+                nome: "Caneta",
+                preco: 6.89,
+                desconto: 0.15
+            },
+            methods: { // Os métodos dentro do campo "methods" ficarão disponíveis para todo o template
+                horaCerta() {
+                    return new Date().toLocaleString()
+                }
+            },
+            computed: { // "computed" serve para armazenar valores pré computados
+                precoComDesconto() {
+                    return this.preco * (1 - this.desconto) // Dentro da instância, é necessário referênciar os dados com o "this"
+                }
+            }
+        })
     </script>
 </body>
+
 </html>
