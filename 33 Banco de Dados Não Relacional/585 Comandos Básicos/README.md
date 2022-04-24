@@ -22,7 +22,16 @@ show collections
 ---
 Deletar uma collection:
 ```js
-db.NomeDoBancoDeDados.drop()
+db.nomeDaCollection.drop()
+```
+---
+Mostrar dados de uma collection:
+```js
+db.nomeDaCollection.find()
+```
+ou:
+```js
+db.nomeDaCollection.find().pretty()
 ```
 
 # Observação
