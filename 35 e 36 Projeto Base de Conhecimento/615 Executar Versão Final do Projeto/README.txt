@@ -1,0 +1,1 @@
+Os arquivos SQL dentro dessa pasta foram utilizados para criar a database.
